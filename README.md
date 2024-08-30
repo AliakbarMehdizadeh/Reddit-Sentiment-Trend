@@ -8,10 +8,7 @@ The **Reddit Sentiment Trend Analysis** project aims to analyze and visualize se
 3. Get your credentials from [Reddit](https://www.reddit.com/prefs/apps) and add them to `credentials.py`.
 4. Edit `config.py`.
 5. Run `python main.py`.
-
-## Acknowledgments
-
-- [TextBlob](https://textblob.readthedocs.io/en/dev/)
-- [VADER](https://github.com/cjhutto/vaderSentiment)
-- [PRAW](https://praw.readthedocs.io/en/latest/)
+   
+![Screenshot](result/sentiment_trends.png)
+![Screenshot](result/corr_matrix.png)
 
