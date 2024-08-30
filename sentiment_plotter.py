@@ -49,11 +49,13 @@ class SentimentPlotter:
         ax2.legend(loc='best')
         ax2.grid(True)  # Add grid to the second subplot
         
+        # Ensure the 'result' directory exists
+        result_dir = 'result'
+        if not os.path.exists(result_dir):
+            os.makedirs(result_dir)
+        
         # Save the figure
-        if not os.path.exists('result'):
-            os.makedirs('result')
-        plt.savefig('result/sentiment_trends.png')
-        # Adjust layout
+        plt.savefig(os.path.join(result_dir, 'sentiment_trends.png'))
         plt.tight_layout()
         plt.show()
         plt.close()
@@ -81,11 +83,14 @@ class SentimentPlotter:
         sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
         plt.title('Correlation Matrix of Sentiment Scores')
          
+        # Ensure the 'result' directory exists
+        result_dir = 'result'
+        if not os.path.exists(result_dir):
+            os.makedirs(result_dir)
+        
         # Save the figure
-        if not os.path.exists('result'):
-            os.makedirs('result')
-        plt.savefig('result/corr_matrix.png')
-        plt.show()
+        plt.savefig(os.path.join(result_dir, 'corr_matrix.png'))
+        plt.show()  # Comment out if you don't want to display the plot interactively
         plt.close()
 
         # Display the correlation matrix
